@@ -2,49 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Error|mc666</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1fc8b4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .error-container {
-            max-width: 90%;
-            padding: 20px;
-        }
-        .error-code {
-            font-size: 4em;
-            color: #d9534f;
-            margin: 20px 0;
-        }
-        .error-message {
-            font-size: 1.5em;
-            color: #0333;
-            margin: 20px 0;
-        }
-        .return-home {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 1em;
-            color: #fff;
-            background-color: aqua;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .return-home:hover {
-            background-color: rgb(14, 235, 25);
-        }
-    </style>
 </head>
 <body>
     <div class="error-container">
@@ -54,6 +13,50 @@
     </div>
 <style>
     /* ... 其他样式 ... */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #b0da66; /* 黄绿色背景 */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+    }
+    .error-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+    .error-code {
+        font-size: 4em;
+        color: #d9534f;
+        margin: 20px 0;
+    }
+    .error-message {
+        font-size: 1.5em;
+        color: rgba(24, 24, 20, 0.242);
+        margin: 20px 0;
+    }
+    .return-home {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1em;
+        color: #fff;
+        background-color: aqua;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .return-home:hover {
+        background-color: rgb(14, 235, 25);
+    }
+    .error-image {
+        width: 100px;
+        height: auto;
+        margin: 20px 0;
+    }
     .time {
         font-size: 1em;
         color: hwb(0 0% 100% / 0.947);
@@ -61,6 +64,47 @@
     }
 </style>
 </head>
+<button class="woodfish-button" onclick="addMerit()">敲木鱼</button>
+<div class="merit-message" id="meritMessage"></div>
+
+<style>
+    .woodfish-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1em;
+        color: #f40707;
+        background-color: yellow;
+        text-decoration: none;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: background-color 0.3s;
+    }
+    .woodfish-button:hover {
+        background-color: gold;
+    }
+    .merit-message {
+        font-size: 1.5em;
+        color: #d9534f;
+        margin-top: 20px;
+        text-align: center;
+    }
+</style>
+<script>
+    function addMerit() {
+        var meritMessage = document.getElementById("meritMessage");
+        meritMessage.textContent = "功德+1";
+        setTimeout(function() {
+            meritMessage.textContent = "";
+        }, 50); // 消息显示0.05秒后消失
+    }
+</script>
+
+
 <body>
      <div class="error-container">
          <!-- ... 404错误信息 ... -->
@@ -77,4 +121,3 @@
      </script>
 </body>
 </html>
- 
